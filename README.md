@@ -48,6 +48,25 @@ This project demonstrates professional backend engineering practices, including:
 
 ### 📖 Documentation
 - **Interactive API Docs**: Available at `/docs` via Swagger.
+- **Mobile Frontend Guide**: [docs/mobile-frontend.md](file:///Users/jiggsgadhia/Documents/mad2x-server/docs/mobile-frontend.md)
+- **Web Frontend Guide**: [docs/web-frontend.md](file:///Users/jiggsgadhia/Documents/mad2x-server/docs/web-frontend.md)
+
+## ⚙️ Environment Variables
+
+Create a `.env` file in the root directory.
+
+### Required
+- `MONGO_URI`: MongoDB connection string (e.g., `mongodb://localhost:27017/mad2x`)
+- `JWT_SECRET`: Secret key for signing access tokens.
+
+### Optional (with Defaults)
+- `PORT`: Server port (default: `5000`)
+- `NODE_ENV`: `development` | `production` | `test`
+- `JWT_EXPIRES_IN`: Access token lifespan (default: `1d`)
+- `REFRESH_TOKEN_SECRET`: Secret key for refresh tokens (defaults to `JWT_SECRET`)
+- `REFRESH_TOKEN_EXPIRES_IN`: Refresh token lifespan (default: `7d`)
+- `CORS_ORIGIN`: Allowed origins (default: `*`)
+- `ENABLE_SWAGGER`: Explicitly enable/disable Swagger (default: `true` in dev, `false` in prod)
 
 ## Features
 
