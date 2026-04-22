@@ -23,20 +23,31 @@ This project demonstrates professional backend engineering practices, including:
 ## Architecture
 
 ```text
-src
-├── app.ts          # Application configuration
-├── server.ts       # Entry point & DB connection
-├── config          # Environment & library settings
-├── constants       # Shared messages & strings
-├── controllers     # HTTP request handlers
-├── docs            # Swagger definitions
-├── middlewares     # Auth, validation, upload, etc.
-├── models          # Mongoose schemas
-├── routes          # API route definitions
-├── schemas         # Zod validation schemas
-├── services        # Business logic & persistence
-└── utils           # Helper functions
+.
+├── docs/                   # Frontend implementation guides
+│   ├── mobile-frontend.md
+│   └── web-frontend.md
+├── src/                    # Backend source code
+│   ├── config/             # DB, Env, Logger settings
+│   ├── controllers/        # Auth, Doctor, Appointment handlers
+│   ├── docs/               # Swagger/OpenAPI specifications
+│   ├── middlewares/        # Auth, Error, Upload, Validation
+│   ├── models/             # Mongoose (User, Doctor, Appointment)
+│   ├── routes/             # API Route definitions (v1)
+│   ├── schemas/            # Zod validation schemas
+│   ├── services/           # Core business logic
+│   ├── utils/              # API Response, Error, Token helpers
+│   ├── app.ts              # Express app configuration
+│   └── server.ts           # Entry point & DB connection
+├── test/                   # Comprehensive test suites
+│   ├── e2e.test.ts         # Full business flow tests
+│   ├── api.integration.ts  # Controller/Middleware tests
+│   └── *-schema.test.ts    # Individual validation tests
+└── package.json            # Scripts and dependencies
 ```
+
+### 📖 Documentation
+- **Interactive API Docs**: Available at `/docs` via Swagger.
 
 ## Features
 
