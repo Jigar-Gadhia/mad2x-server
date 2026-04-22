@@ -1,0 +1,46 @@
+export const messages = {
+  auth: {
+    invalidCredentials: "Invalid credentials.",
+    unauthorized: "Authentication required.",
+    forbidden: "You do not have permission to perform this action.",
+    invalidToken: "Invalid or expired token.",
+    invalidRefreshToken: "Refresh token is invalid or expired.",
+    userExists: "User already exists.",
+    userCreated: "User created successfully.",
+    signinSuccess: "Signed in successfully.",
+    tokenRefreshed: "Session refreshed successfully.",
+    logoutSuccess: "Logged out successfully.",
+    profileUpdated: "Profile updated successfully.",
+    passwordResetToken: "Reset token generated successfully.",
+    passwordUpdated: "Password updated successfully.",
+  },
+  doctor: {
+    fetched: "Doctors fetched successfully.",
+    detailFetched: "Doctor fetched successfully.",
+    created: "Doctor created successfully.",
+    updated: "Doctor updated successfully.",
+    deleted: "Doctor deleted successfully.",
+    notFound: "Doctor not found.",
+  },
+  appointment: {
+    created: "Appointment booked successfully.",
+    fetched: "Appointments fetched successfully.",
+    cancelled: "Appointment cancelled successfully.",
+    notFound: "Appointment not found.",
+    alreadyCancelled: "Appointment is already cancelled.",
+    conflict: "Selected slot is no longer available.",
+  },
+  common: {
+    notFound: "Route not found.",
+    serverError: "Something went wrong.",
+    userNotFound: "User not found.",
+    invalidId: "Invalid resource id.",
+    duplicateResource: "Resource already exists.",
+  },
+  password: {
+    resetRequested: "If an account exists for this email, password reset instructions have been generated.",
+  },
+  doctorStatus: {
+    unavailable: "Doctor is currently unavailable for booking.",
+  },
+} as const;

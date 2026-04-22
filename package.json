@@ -1,22 +1,56 @@
 {
   "name": "mad2x-server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "Production-ready Express API for authentication, profile management, and doctor discovery.",
+  "main": "dist/src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "admin:promote": "tsx src/scripts/promote-admin.ts",
+    "start": "node dist/src/server.js",
+    "start:prod": "NODE_ENV=production node dist/src/server.js",
+    "test": "node --import tsx --test test/**/*.test.ts",
+    "test:e2e": "NODE_ENV=test node --import tsx --test test/e2e.test.ts",
+    "check": "tsc --noEmit && npm test"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "rest-api",
+    "backend"
+  ],
+  "author": "Jigar Gadhia",
   "license": "ISC",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "dependencies": {
     "bcryptjs": "^3.0.2",
-    "crypto": "^1.0.1",
+    "cors": "^2.8.6",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "express-rate-limit": "^8.3.2",
+    "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.2",
+    "mongodb-memory-server": "^11.0.1",
     "mongoose": "^8.15.1",
-    "multer": "^2.0.1"
+    "morgan": "^1.10.1",
+    "multer": "^2.0.1",
+    "supertest": "^7.2.2",
+    "swagger-ui-express": "^5.0.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/morgan": "^1.9.10",
+    "@types/multer": "^2.1.0",
+    "@types/node": "^24.12.2",
+    "@types/supertest": "^7.2.0",
+    "@types/swagger-ui-express": "^4.1.8",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   }
 }
