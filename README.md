@@ -46,11 +46,6 @@ This project demonstrates professional backend engineering practices, including:
 └── package.json            # Scripts and dependencies
 ```
 
-### 📖 Documentation
-- **Interactive API Docs**: Available at `/docs` via Swagger.
-- **Mobile Frontend Guide**: [docs/mobile-frontend.md](file:///Users/jiggsgadhia/Documents/mad2x-server/docs/mobile-frontend.md)
-- **Web Frontend Guide**: [docs/web-frontend.md](file:///Users/jiggsgadhia/Documents/mad2x-server/docs/web-frontend.md)
-
 ## ⚙️ Environment Variables
 
 Create a `.env` file in the root directory.
